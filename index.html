@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper wrapper-focus" id="wrapper">
+      <div class="container">
+        <div class="time__monitor">
+          <div class="time__ring">
+            <svg class="svg-ring" height="200" width="200">
+              <circle
+                r="90"
+                cx="100"
+                cy="100"
+                fill="transparent"
+                stroke="#007fff"
+                stroke-width="15"
+                transform="rotate(-90 100 100)"
+              />
+            </svg>
+            <svg class="svg-ring-back" height="200" width="200">
+              <circle
+                r="90"
+                cx="100"
+                cy="100"
+                fill="transparent"
+                stroke="#e0e0e0"
+                stroke-width="15"
+                transform="rotate(-90 100 100)"
+              />
+            </svg>
+          </div>
+          <div class="time__info">
+            <h2>
+              <span id="minutes"></span>
+              <span> : </span>
+              <span id="second">00</span>
+            </h2>
+            <div class="indecator-priod">
+              <span class="period"></span>
+              <span class="period"></span>
+              <span class="period"></span>
+              <span class="period"></span>
+            </div>
+            <h3 id="mode">Focus</h3>
+          </div>
+        </div>
+        <!-- =========controller================= -->
+        <div class="control__btn">
+          <button class="btn btn--skip">Skip</button>
+          <button class="btn btn--start">Start</button>
+          <button class="btn btn--pause">Pause</button>
+        </div>
+        <div class="settings settings-hidden">
+          <form class="form">
+            <div class="form-group">
+              <label for="duration">Focus :</label>
+              <input type="text" name="duration" id="duration" />
+            </div>
+            <div class="form-group">
+              <label for="break">Break :</label>
+              <input type="text" name="break" id="break" />
+            </div>
+            <button type="submit" id="submitBtn" class="btn btn-submit">
+              ok
+            </button>
+          </form>
+        </div>
+        <button class="btn btn-setting" id="setting-icon">
+          <img src="./img/settings.png" alt="" />
+        </button>
+      </div>
+    </div>
+
+    <script type='module' src="app.js"></script>
+  </body>
+</html>
